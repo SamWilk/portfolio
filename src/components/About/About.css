@@ -1,0 +1,32 @@
+.about {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--cream);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  font-size: 1.125rem;
+  color: var(--dark-brown);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}

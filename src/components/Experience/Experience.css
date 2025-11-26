@@ -1,0 +1,101 @@
+.experience {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--beige);
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background-color: var(--cream);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 8px;
+  transition: var(--transition);
+  border-left: 4px solid var(--accent);
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(107, 93, 79, 0.15);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-header h3 {
+  font-size: 1.5rem;
+  color: var(--deep-brown);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 1.125rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.experience-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+  color: var(--dark-brown);
+}
+
+.responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+
+.responsibilities li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  color: var(--dark-brown);
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .experience {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .experience-item {
+    padding: var(--spacing-sm);
+  }
+
+  .experience-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
