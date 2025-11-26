@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
@@ -9,6 +10,7 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -29,7 +31,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newErrors = {};
@@ -50,13 +52,34 @@ const Contact = () => {
       return;
     }
 
-    // Here you would typically send the form data to a backend
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
 
-    // Reset submitted message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      // Replace these with your EmailJS credentials
+      const serviceId = "service_i9wtqxz";
+      const templateId = "template_m9dl8qq";
+      const publicKey = "UmxHmWeQxFA1XrgaT";
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "samwilk1898@gmail.com",
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+
+      // Reset submitted message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setErrors({ submit: "Failed to send message. Please try again." });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -96,6 +119,11 @@ const Contact = () => {
             {submitted && (
               <div className="success-message">
                 Thank you for your message! I'll get back to you soon.
+              </div>
+            )}
+            {errors.submit && (
+              <div className="error-message" style={{ marginBottom: "1rem" }}>
+                {errors.submit}
               </div>
             )}
             <form onSubmit={handleSubmit} className="contact-form">
@@ -144,8 +172,12 @@ const Contact = () => {
                 )}
               </div>
 
-              <button type="submit" className="btn-primary">
-                Send Message
+              <button
+                type="submit"
+                className="btn-primary"
+                disabled={isLoading}
+              >
+                {isLoading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
