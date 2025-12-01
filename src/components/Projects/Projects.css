@@ -88,6 +88,32 @@
   color: var(--cream);
 }
 
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--beige);
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  background-color: var(--deep-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(107, 93, 79, 0.2);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .projects {

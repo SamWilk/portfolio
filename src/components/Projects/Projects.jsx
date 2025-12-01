@@ -3,6 +3,20 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
+      title: "Handicap Trackr",
+      description:
+        "Golf handicap tracking application that helps golfers monitor their performance and calculate their official handicap index.",
+      technologies: ["React", "Vite", "JavaScript"],
+      period: "November 2025",
+      highlights: [
+        "Built intuitive interface for tracking golf scores and rounds",
+        "Implemented handicap calculation algorithm",
+        "Deployed on Vercel for seamless accessibility",
+      ],
+      liveLink: "https://vite-react-nu-two-36.vercel.app",
+      githubLink: "https://github.com/SamWilk/handicap-trackr",
+    },
+    {
       title: "JobTrackr",
       description:
         "Full-stack web application for tracking and managing job applications with secure authentication and responsive UI.",
@@ -20,6 +34,7 @@ const Projects = () => {
         "Containerized with Docker & Docker Compose for streamlined deployment",
         "Implemented responsive UI for optimal user experience",
       ],
+      githubLink: "https://github.com/SamWilk/job-trackr",
     },
   ];
 
@@ -45,6 +60,30 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+              {(project.liveLink || project.githubLink) && (
+                <div className="project-links">
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      View Live Site
+                    </a>
+                  )}
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      View on GitHub
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
