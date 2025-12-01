@@ -34,7 +34,7 @@ const Projects = () => {
         "Containerized with Docker & Docker Compose for streamlined deployment",
         "Implemented responsive UI for optimal user experience",
       ],
-      githubLink: "https://github.com/SamWilk/job-trackr",
+      githubLink: "https://github.com/SamWilk/job-tracker",
     },
   ];
 
