@@ -3,6 +3,20 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
+      title: "Spendr",
+      description:
+        "Expense tracking application that helps users manage their finances by tracking spending habits and budgets.",
+      technologies: ["React", "Vite", "JavaScript"],
+      period: "December 2025",
+      highlights: [
+        "Created intuitive expense tracking interface",
+        "Implemented budget management features",
+        "Deployed on Vercel for easy access",
+      ],
+      liveLink: "https://spendr-x9la.vercel.app/",
+      githubLink: "https://github.com/SamWilk/spendr",
+    },
+    {
       title: "Handicap Trackr",
       description:
         "Golf handicap tracking application that helps golfers monitor their performance and calculate their official handicap index.",
