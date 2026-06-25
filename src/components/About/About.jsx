@@ -13,9 +13,10 @@ const About = () => {
               microservices and modern web applications.
             </p>
             <p>
-              Currently working as a Software Engineer II at Beeline, Inc, where
-              I build and maintain microservices within event-driven
-              architectures, mentor interns, and optimize performance for
+              Currently working at Black Diamond Wealth Solutions, after
+              previously working as a Software Engineer II at Beeline, Inc,
+              where I built and maintained microservices within event-driven
+              architectures, mentored interns, and optimized performance for
               enterprise clients including Meta, Amazon, and JP Morgan Chase.
             </p>
             <p>

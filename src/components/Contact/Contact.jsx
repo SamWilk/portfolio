@@ -184,7 +184,7 @@ const Contact = () => {
         </div>
 
         <div className="footer">
-          <p>&copy; 2025 Sam Wilk. All rights reserved.</p>
+          <p>&copy; 2026 Sam Wilk. All rights reserved.</p>
         </div>
       </div>
     </section>

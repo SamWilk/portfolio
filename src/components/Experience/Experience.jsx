@@ -3,12 +3,24 @@ import "./Experience.css";
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "Black Diamond Wealth Solutions",
+      location: "Jacksonville, FL (Hybrid)",
+      period: "March 2026 - Present",
+      responsibilities: [
+        "Maintain core APIs that provide foundational financial data across internal systems",
+        "Develop and support C# services with RabbitMQ eventing, PostgreSQL, and SQL Server",
+        "Maintain core API functionality with a focus on reliability, data integrity, and production support",
+        "Own and maintain a project for audit data, supporting traceability and compliance-focused workflows",
+      ],
+    },
+    {
       title: "Software Engineer II",
       company: "Beeline, Inc",
       location: "Jacksonville, FL",
-      period: "May 2022 - Present",
+      period: "May 2022 - 2026",
       responsibilities: [
-        "Built and maintain a production-grade microservice within an event-driven architecture, improving scalability and reliability",
+        "Built and maintained a production-grade microservice within an event-driven architecture, improving scalability and reliability",
         "Drove migration from Azure Application Insights to Grafana, modernizing monitoring and alerting for critical applications",
         "Led and mentored multiple cohorts of interns, spearheading internship projects and guiding successful delivery",
         "Optimized C# and SQL workflows to accelerate long-running processes, reducing runtimes and boosting client satisfaction",
